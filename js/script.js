@@ -6,6 +6,7 @@
 }) */
 
 const titleClickHandler = function(event){
+    event.preventDefault();
     console.log('Link was clicked!');
     const clickedElement = this;
     console.log('event: ', event);
