@@ -48,4 +48,33 @@ const titleClickHandler = function(event){
     link.addEventListener('click', titleClickHandler);
   }
   
+const optArticleSelector = '.post',
+  optTitleSelector = '.post-title',
+  optTitleListSelector = '.titles';
+
+function generateTitleLinks() {
+  console.log('Function completed!');
   
+
+    /* remove contents of titleList */
+    const titleList = document.querySelector(optTitleListSelector);
+    titleList.innerHTML = '';
+
+    
+
+    /* for each article */
+
+    /* find the title element */
+
+    /* get the title from the title element */
+
+    /* create HTML of the link */
+
+    /* insert link into titleList */
+
+}
+
+{
+generateTitleLinks();
+
+}
