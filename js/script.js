@@ -192,25 +192,25 @@ function generateAuthors(){
   /* START LOOP: for every article: */
   for(let article of articles) {
 
-    /* find tags wrapper */
+    /* find author wrapper */
     const wrapperOfAuthor = article.querySelector(optArticleAuthorSelector);
     console.log('wrapperOfAuthor: ', wrapperOfAuthor);
     /* make html variable with empty string */
     let html = '';
-    /* get tags from data-tags attribute */
-    const dataAuthorAttribute = article.getAttribute('data-author');
-    console.log('dataAuthorAttribute: ', dataAuthorAttribute);
+    /* get author from data-author attribute */
+    const author = article.getAttribute('data-author');
+    console.log('author: ', author);
     /* generate HTML of the link */
-    const authorLink = `by <a href=${dataAuthorAttribute}`;
-    console.log('articleTag: ', tagLink);
+    const authorLink = `by <a href="#author-${author}">${author}</a>`;
+    console.log('authorLink: ', authorLink);
     /* add generated code to html variable */
-    html = html + tagLink;
+    html = html + authorLink;
     console.log('html: ', html);
-    /* END LOOP: for each tag */
-  
-    /* insert HTML of all the links into the tags wrapper */
-    wrapperOfTags.insertAdjacentHTML('afterbegin', html);
-    console.log('wrapperOfTags: ', wrapperOfTags);
+    /* insert HTML of link author into the author wrapper */
+    wrapperOfAuthor.insertAdjacentHTML('afterbegin', html);
+    console.log('wrapperOfAuthor: ', wrapperOfAuthor);
   /* END LOOP: for every article: */
   }
 }
+
+generateAuthors();
