@@ -293,15 +293,13 @@ function generateAuthors(){
   /* [NEW] find list of authors in right column */
   const authorList = document.querySelector(optAuthorsListSelector);
 
-  const authorsParams = calculateTagsParams(allAuthors);
-
   /* [NEW] create variable for all links HTML code */
   let allAuthorsHTML = '';
 
   /* [NEW] START LOOP: for each author in allAuthors: */
   for(let author in allAuthors) {
     /* [NEW] generate code of a link and add it to allAuthorsHTML */
-    const authorLinkHTML = `<li><a href="#author-${author}">${author} <span>(${authorsParams})</span></a></li>`;
+    const authorLinkHTML = `<li><a href="#author-${author}">${author} (${allAuthors[author]})</a></li>`;
     allAuthorsHTML += authorLinkHTML;
     /* [NEW] END LOOP: for each author in allAuthors: */
   }
